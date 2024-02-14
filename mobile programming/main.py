@@ -29,13 +29,13 @@ class LuasApp(App):
     def calculate(self, instance):
         shape = self.menu.text.lower()
 
-        if shape == 'lingkaran' or 'Lingkaran' or 'LINGKARAN':
+        if shape == 'lingkaran' :
             self.input_layout.clear_widgets()
             self.input_layout.add_widget(Label(text="Masukkan jari-jari:"))
             self.radius_input = TextInput(multiline=False)
             self.input_layout.add_widget(self.radius_input)
 
-        elif shape == 'segitiga' or 'Segitiga' or 'SEGITIGA':
+        elif shape == 'segitiga':
             self.input_layout.clear_widgets()
             self.input_layout.add_widget(Label(text="Masukkan alas:"))
             self.base_input = TextInput(multiline=False)
@@ -78,7 +78,7 @@ class LuasApp(App):
     def calculate_area(self, instance):
         shape = self.menu.text.lower()
 
-        if shape == 'lingkaran' or 'Lingkaran' or 'Lingkaran':
+        if shape == 'lingkaran':
             radius = float(self.radius_input.text)
             area = pi * radius ** 2
         elif shape == 'segitiga':
